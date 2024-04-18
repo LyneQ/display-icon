@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+
+#icons {
+    width: 90px !important;
+
+    padding: 10px;
+
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.icon { ; transform: scale(0); }
+.icon:not(:first-child) { margin-top: -6px;  }
+.icon:nth-child(odd) { text-align: left }
+.icon:nth-child(even) { text-align: right }
+.icon.show { transform: scale(1); transition: all .8s }
+.icon svg { width: 34px }
+.icon svg path { fill: #343434; }
+.icon.on svg path:not(.fa-secondary)  { fill: #F1F1F1; }
+.icon.on svg path.fa-secondary  { fill: #03A9F4; }
